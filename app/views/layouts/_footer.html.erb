@@ -1,12 +1,12 @@
 <footer class="footer">
   <small>
-    E-Learning Page by Tokyo
+    <%= t "title.footer" %>
   </small>
   <nav>
     <ul>
-      <li><%= link_to "About", about_path %></li>
-      <li><%= link_to "Contact", contact_path %></li>
-      <li>News</li>
+      <li><%= link_to t("title.about"), about_path %></li>
+      <li><%= link_to t("title.contact"), contact_path %></li>
+      <li><% t "title.new" %></li>
     </ul>
   </nav>
 </footer>
