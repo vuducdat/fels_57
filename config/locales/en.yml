@@ -20,4 +20,21 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 en:
-  hello: "Hello world"
+  views:
+    user: "Signup"
+  button:
+    create: "Create"
+  title:
+    welcome: "welcome to the E-Learning"
+    footer: "E-Learning Page by Tokyo"
+    header: "E-Learning Page"
+    home: "Welcome to the E-Learning Page"
+    home1: "Sign up now!"
+    help: "Help"
+    home2: "Home"
+    login: "Log in"
+    about: "About"
+    contact: "Contact"
+    error: "The form contains"
+    new: "News"
+
