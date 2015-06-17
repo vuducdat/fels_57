@@ -16,9 +16,9 @@
         <span><%= t "title.checkbox" %></span>
       <% end %>
 
-      <%= f.submit t "button.login", class: "btn btn-primary" %>
+      <%= f.submit t("button.login"), class: "btn btn-primary" %>
     <% end %>
 
-    <p>New user? <%= link_to t("title.signup"), signup_path %></p>
+    <p><%= t "title.new_user" %>? <%= link_to t("title.signup"), signup_path %></p>
   </div>
 </div>
