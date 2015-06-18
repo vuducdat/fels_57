@@ -32,6 +32,10 @@ en:
     all_categories: "All Categories"
     new_category: "Create Category"
     add_category: "Add Category"
+    view_profile: "view my profile"
+    micropost: "Microposts:"
+    following: "Following"
+    follower: "followers"
   menu:
     profile: "Profile"
     setting: "Settings"
