@@ -5,6 +5,8 @@ en:
     create: "Create"
     login: "Log in"
     save: "Save changes"
+    follow: "Follow"
+    unfollow: "Unfollow"
   title:
     welcome: "welcome to the E-Learning"
     footer: "E-Learning Page by Tokyo"
@@ -32,6 +34,10 @@ en:
     all_categories: "All Categories"
     new_category: "Create Category"
     add_category: "Add Category"
+    view_profile: "view my profile"
+    micropost: "Microposts:"
+    following: "Following"
+    follower: "Followers"
   menu:
     profile: "Profile"
     setting: "Settings"

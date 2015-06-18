@@ -9,10 +9,15 @@ Rails.application.routes.draw do
   get "contact"   =>  "static_pages#contact"
   get "signup"    =>  "users#new"
   
-  resources :users, expect: :destroy
-  
   namespace :admin do
     resources :users, only: [:index, :destroy]
     resources :categories
   end
+  resources :users do
+    resources :following, only: [:index]
+    resources :followed, only: [:index]
+  end
+  resources :relationships, only: [:create, :destroy]
+  resources :users, except: :destroy
+  resources :relationships, only: [:create, :destroy]
 end
