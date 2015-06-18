@@ -1,5 +1,5 @@
 <%= form_for @user do |f| %>
-  <%= render "shared/error_messages", object: f.object %>
+  <%= render "shared/error_messages" %>
 
   <%= f.label :name %>
   <%= f.text_field :name, class: "form-control" %>
@@ -15,7 +15,3 @@
 
   <%= f.submit t("button.create"), class: "btn btn-primary" %>
 <% end %>
-<li>
-  <%= gravatar_for user, size: Settings.avatar_size_user %>
-  <%= link_to user.name, user %>
-</li>
