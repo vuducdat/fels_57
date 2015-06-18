@@ -4,6 +4,7 @@ en:
   button:
     create: "Create"
     login: "Log in"
+    save: "Save changes"
   title:
     welcome: "welcome to the E-Learning"
     footer: "E-Learning Page by Tokyo"
@@ -20,10 +21,18 @@ en:
     new: "News"
     signup: "Sign up now!"
     user: "Users"
+    new_user: "New user"
     checkbox: "Remember me on this computer"
+    edituser: "Edit user"
+    updateprofile: "Update your profile"
+    confirm: "Confirmation"
+    update_profile_success: "Profile updated"
+    change: "change"
   menu:
     profile: "Profile"
     setting: "Settings"
     account: "Account"
   danger:
-    errorMail: "Invalid email/password combination"  
+    errorMail: "Invalid email/password combination"
+  flash: 
+    logout: "Are you sure logout ?"  

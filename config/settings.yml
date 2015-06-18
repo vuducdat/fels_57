@@ -1,2 +1,6 @@
 avatar: "https://secure.gravatar.com/avatar/#"
 remember: "1"
+avatar_mail: "http://gravatar.com/emails"
+name_maximum: 50
+email_maximum: 255
+password_maximum_length: 6
