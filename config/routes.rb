@@ -8,6 +8,8 @@ Rails.application.routes.draw do
   get "about"     =>  "static_pages#about"
   get "contact"   =>  "static_pages#contact"
   get "signup"    =>  "users#new"
+
+  match "/users/:id/:type", to: "relationships#index", via: :get
   
   namespace :admin do
     resources :users, only: [:index, :destroy]
@@ -15,11 +17,7 @@ Rails.application.routes.draw do
       resources :words
     end
   end
-  resources :users do
-    member do
-      get :following, :followers
-    end
-  end
+
   resources :relationships, only: [:create, :destroy]
   resources :users, except: :destroy
 end

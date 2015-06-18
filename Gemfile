@@ -8,7 +8,7 @@ gem "bootstrap-sass", "3.2.0.0"
 gem "bootstrap-will_paginate", "0.0.10"
 gem "will_paginate", "3.0.7"
 gem "bcrypt", "3.1.7"
-gem "faker", "1.4.2"
+gem "faker", "1.4.3"
 gem "rails_config"
 gem "sqlite3"
 # Use SCSS for stylesheets
@@ -23,6 +23,7 @@ gem "coffee-rails", "~> 4.1.0"
 # Use jquery as the JavaScript library
 gem "jquery-rails"
 # Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
+gem "friendly_id"
 gem "turbolinks"
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem "jbuilder", "~> 2.0"
