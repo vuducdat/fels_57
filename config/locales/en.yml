@@ -29,12 +29,16 @@ en:
     update_profile_success: "Profile updated"
     change: "change"
     all_users: "All Users"
+    all_categories: "All Categories"
+    new_category: "Create Category"
+    add_category: "Add Category"
   menu:
     profile: "Profile"
     setting: "Settings"
     account: "Account"
     mana: "Manage"
     mana_users: "Manage Users"
+    mana_categories: "Manage Categories"
   danger:
     errorMail: "Invalid email/password combination"
   flash: 
@@ -44,5 +48,9 @@ en:
     not_admin: "You aren't admin"
     deleted: "User deleted"
     can_not_delete: "Can't delete user"
+    add_category_ok: "Created Category"
   confirm:
     sure: "Are you sure?"
+  info:
+    created_time: "Created at: "
+    updated_time: "Updated at: "
