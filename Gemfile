@@ -47,4 +47,7 @@ group :development, :test do
 end
 
 # Use Bootstrap for stylesheets
-  gem "bootstrap-sass",       "3.2.0.0"
+  gem "will_paginate"
+  gem "bootstrap-will_paginate"
+# Use for make user data
+  gem "faker"

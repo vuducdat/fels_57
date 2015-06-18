@@ -14,6 +14,9 @@ class User < ActiveRecord::Base
 
   before_save {self.email = email.downcase}
   
+  scope :normal, ->{where role: Settings.normal}
+  scope :is_admins, ->{where role: Settings.admin}
+
   VALID_EMAIL_REGEX = /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i
   validates :name,  presence: true, length: {maximum: Settings.name_maximum}
   validates :email, presence: true, length: {maximum: Settings.email_maximum},

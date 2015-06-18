@@ -1,0 +1,10 @@
+<aside>
+  <section class="user_info">
+    <h1>
+      <%= gravatar_for user, size: Settings.avatar_size %>
+      <%= user.name %>
+      <%= link_to "", admin_user_path(user), method: :delete, data: {confirm: 
+        t("confirm.sure")}, class: "glyphicon glyphicon-trash" %>
+    </h1>
+  </section>
+</aside>

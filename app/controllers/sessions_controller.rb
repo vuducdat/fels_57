@@ -7,7 +7,7 @@ class SessionsController < ApplicationController
     if user && user.authenticate(params[:session][:password])
       log_in user
       params[:session][:remember_me] == Settings.remember ? remember(user) : forget(user) 
-      redirect_to user
+      redirect_to user.role == Settings.admin ? admin_users_url : user
     else
       flash.now[:danger] = t "danger.errorMail"
       render :new

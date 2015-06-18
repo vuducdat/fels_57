@@ -28,11 +28,21 @@ en:
     confirm: "Confirmation"
     update_profile_success: "Profile updated"
     change: "change"
+    all_users: "All Users"
   menu:
     profile: "Profile"
     setting: "Settings"
     account: "Account"
+    mana: "Manage"
+    mana_users: "Manage Users"
   danger:
     errorMail: "Invalid email/password combination"
   flash: 
     logout: "Are you sure logout ?"  
+    errorMail: "Invalid email/password combination"  
+    not_loggin: "Please login"
+    not_admin: "You aren't admin"
+    deleted: "User deleted"
+    can_not_delete: "Can't delete user"
+  confirm:
+    sure: "Are you sure?"
