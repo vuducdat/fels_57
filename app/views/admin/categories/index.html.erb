@@ -1,0 +1,7 @@
+<% provide :title, t("title.all_categories") %>
+<h1><%= t "title.all_categories" %></h1>
+<%= link_to t("title.add_category"), new_admin_category_path %>
+  <ul class="users">
+    <%= render @categories %>
+  </ul>
+<%= will_paginate %>

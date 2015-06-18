@@ -7,9 +7,9 @@ class Admin::UsersController < ApplicationController
 
   def destroy
     if User.find(params[:id]).destroy
-      flash[:danger] = t "flash.can_not_delete"
-    else
       flash[:success] = t "flash.deleted"
+    else
+      flash[:danger] = t "flash.can_not_delete"
     end
     redirect_to admin_users_url
   end
