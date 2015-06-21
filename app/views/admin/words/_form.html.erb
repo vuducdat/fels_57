@@ -1,0 +1,19 @@
+<%= form_for [:admin, @category, @word] do |f| %>
+  <%= render "shared/error_messages", object: f.object %>
+
+  <%= f.hidden_field :category_id %>
+  <%= f.label :content %>
+  <%= f.text_field :content, class: "form-control" %>
+
+  <h2><%= t "title.answer" %></h2>
+
+  <%= f.fields_for :answers do |builder| %>
+    <%= render "answer_fields", f: builder %>
+  <% end %>
+
+  <p>
+    <%= link_to_add_fields t("title.add_answer"), f, :answers %>
+  </p>
+
+  <%= f.submit t("button.create"), class: "btn btn-primary" %>
+<% end %>
