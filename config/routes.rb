@@ -11,7 +11,9 @@ Rails.application.routes.draw do
   
   namespace :admin do
     resources :users, only: [:index, :destroy]
-    resources :categories
+    resources :categories do
+      resources :words
+    end
   end
   resources :users do
     member do

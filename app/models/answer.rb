@@ -3,4 +3,6 @@ class Answer < ActiveRecord::Base
   
   has_many :lesson_words
   has_many :lesson, through: :lesson_words
+
+  validates :content, presence: true
 end
