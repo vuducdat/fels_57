@@ -1,0 +1,32 @@
+<% provide :title, @category.name %>
+<div class="row">
+  <aside class="col-md-6">
+    <section class="user_info">
+      <h1>
+        <%= @category.name %>
+      </h1>
+      <p>
+        <%= @category.description %>
+      </p>
+      <p>
+        <%= t "info.created_time" %><%= @category.created_at %>
+      </p>
+        <%= t "info.updated_time" %><%= @category.updated_at %>
+      </p>
+      </br>
+      <h3>
+        <%= link_to t("title.add_word"), [:new, :admin, @category, :word] %>
+      </h3>
+      <h3>
+        <%= link_to t("title.edit"), [:edit, :admin, @category] %>
+      </h3>
+    </section>
+  </aside>
+  <aside class="col-md-6">
+    <section class="user_info">
+      <% @words.each do |word| %>
+        <h2><%= word.content %> </h2>
+      <% end %>
+    </section>
+  </aside>
+</div>
