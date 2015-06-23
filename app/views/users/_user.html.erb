@@ -1,21 +1,8 @@
-<%= form_for @user do |f| %>
-  <%= render "shared/error_messages", object: f.object %>
-
-  <%= f.label :name %>
-  <%= f.text_field :name, class: "form-control" %>
-
-  <%= f.label :email %>
-  <%= f.email_field :email, class: "form-control" %>
-
-  <%= f.label :password %>
-  <%= f.password_field :password, class: "form-control" %>
-
-  <%= f.label :password_confirmation, t("title.confirm") %>
-  <%= f.password_field :password_confirmation, class: "form-control" %>
-
-  <%= f.submit t("button.create"), class: "btn btn-primary" %>
-<% end %>
-<li>
-  <%= gravatar_for user, size: Settings.avatar_size_user %>
-  <%= link_to user.name, user %>
-</li>
+<aside>
+  <section class="user_info">
+    <h1>
+      <%= gravatar_for user, size: Settings.avatar_size %>
+      <%= link_to user.name, user %>
+    </h1>
+  </section>
+</aside>

@@ -6,6 +6,8 @@ en:
     login: "Log in"
     save: "Save changes"
     submit: "Submit"
+    follow: "Follow"
+    unfollow: "Unfollow"
   title:
     welcome: "welcome to the E-Learning"
     footer: "E-Learning Page by Tokyo"
@@ -40,9 +42,9 @@ en:
     view_profile: "view my profile"
     micropost: "Microposts:"
     following: "Following"
-    follower: "followers"
     edit: "Edit"
     edit_category: "Edit Category"
+    follower: "Followers"
   menu:
     profile: "Profile"
     setting: "Settings"
