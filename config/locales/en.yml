@@ -45,6 +45,7 @@ en:
     edit: "Edit"
     edit_category: "Edit Category"
     follower: "Followers"
+    all_words: "All Words"
   menu:
     profile: "Profile"
     setting: "Settings"
@@ -64,6 +65,7 @@ en:
     add_category_ok: "Created Category"
     add_word_ok: "Created Word"
     editted_category: "Editted Category"
+    editted_word: "Editted Word"
   confirm:
     sure: "Are you sure?"
   info:
