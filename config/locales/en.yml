@@ -5,6 +5,7 @@ en:
     create: "Create"
     login: "Log in"
     save: "Save changes"
+    submit: "Submit"
   title:
     welcome: "welcome to the E-Learning"
     footer: "E-Learning Page by Tokyo"
@@ -40,6 +41,8 @@ en:
     micropost: "Microposts:"
     following: "Following"
     follower: "followers"
+    edit: "Edit"
+    edit_category: "Edit Category"
   menu:
     profile: "Profile"
     setting: "Settings"
@@ -58,6 +61,7 @@ en:
     can_not_delete: "Can't delete user"
     add_category_ok: "Created Category"
     add_word_ok: "Created Word"
+    editted_category: "Editted Category"
   confirm:
     sure: "Are you sure?"
   info:
