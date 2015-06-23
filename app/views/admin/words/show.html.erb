@@ -1,0 +1,27 @@
+<% provide :title, @word.content %>
+<div class="row">
+  <aside class="col-md-6">
+    <section class="user_info">
+      <h1 class="alert alert-info" >
+        <%= @word.content %>
+      </h1>
+      <p>
+        <%= t "info.created_time" %><%= @word.created_at %>
+      </p>
+        <%= t "info.updated_time" %><%= @word.updated_at %>
+      </p>
+      <h3><%= link_to t("title.edit"), [:edit, :admin, @category, @word] %></h3>
+    </section>
+  </aside>
+  <aside class="col-md-6">
+    <section>
+      <% @answers.each do |answer| %>
+        <% if answer.is_correct %>
+          <p class="alert alert-success"><%= answer.content %></p>
+        <% else %>
+          <p class="alert alert-danger"><%= answer.content %></p>
+        <% end %>
+      <% end %>
+    </section>
+  </aside>
+</div>

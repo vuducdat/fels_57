@@ -1,0 +1,17 @@
+<aside>
+  <section class="user_info">
+    <h1>
+      <%= link_to word.content, [:admin, @category, word] %>
+    </h1>
+    <h2>
+      <%= link_to "", admin_category_word_path(@category, word), method: :delete, data: {confirm: 
+        t("confirm.sure")}, class: "glyphicon glyphicon-trash" %>
+    </h2>
+    <p>
+      <%= t "info.created_time" %><%= word.created_at %>
+    </p>
+    <p>
+      <%= t "info.updated_time" %><%= word.updated_at %>
+    </p>
+  </section>
+</aside>
