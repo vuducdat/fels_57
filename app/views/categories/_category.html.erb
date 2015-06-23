@@ -1,0 +1,19 @@
+<aside>
+  <section class="user_info">
+    <h1>
+      <%= category.name %>
+      <p>
+        <%= link_to t("link.start"), lessons_path(category_id: category.id), method: :post %>
+      </p>
+    </h1>
+    <p>
+      <%= category.description %>
+    </p>
+    <p>
+      <%= t "info.created_time" %><%= category.created_at %>
+    </p>
+    <p>
+      <%= t "info.updated_time" %><%= category.updated_at %>
+    </p>
+  </section>
+</aside>
