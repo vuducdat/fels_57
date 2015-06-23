@@ -1,8 +1,10 @@
-<aside>
-  <section class="user_info">
-    <h1>
-      <%= gravatar_for user, size: Settings.avatar_size %>
-      <%= link_to user.name, user %>
-    </h1>
-  </section>
-</aside>
+<li>
+  <aside>
+    <section class="user_info">
+      <h1>
+        <%= gravatar_for user, size: Settings.avatar_size %>
+        <%= link_to user.name, user %>
+      </h1>
+    </section>
+  </aside>
+</li>
