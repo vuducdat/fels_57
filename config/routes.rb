@@ -8,8 +8,6 @@ Rails.application.routes.draw do
   get "about"     =>  "static_pages#about"
   get "contact"   =>  "static_pages#contact"
   get "signup"    =>  "users#new"
-
-  match "/users/:id/:type", to: "relationships#index", via: :get
   
   namespace :admin do
     resources :users, only: [:index, :destroy]
@@ -22,4 +20,5 @@ Rails.application.routes.draw do
   resources :users, except: :destroy
   resources :categories, only: :index
   resources :lessons, only: :create
+  match "/users/:id/:type", to: "relationships#index", via: :get
 end

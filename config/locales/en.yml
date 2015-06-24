@@ -54,6 +54,7 @@ en:
     mana: "Manage"
     mana_users: "Manage Users"
     mana_categories: "Manage Categories"
+    user_show_activities: "Show User"
   danger:
     errorMail: "Invalid email/password combination"
   flash: 

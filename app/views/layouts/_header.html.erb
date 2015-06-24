@@ -4,9 +4,9 @@
     <nav>
       <ul class="nav navbar-nav navbar-right">
         <li><%= link_to t("title.home2"), root_path %></li>
-        <li><%= link_to t("title.help"), help_path %></li>
         <% if logged_in? %>
           <li><%= link_to t("title.user"), users_path %></li>
+          <li><%= link_to t("menu.user_show_activities"), "#" %></li>
           <% if admin? %>
             <li class="dropdown">
               <%= link_to t("menu.mana"), "#mana_modal", class: "dropdown-toggle",
