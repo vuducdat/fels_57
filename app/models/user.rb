@@ -56,8 +56,4 @@ class User < ActiveRecord::Base
   def following? other_user 
     following.include? other_user 
   end
-
-  def to_param
-    [id, name.parameterize].join(".")
-  end
 end
