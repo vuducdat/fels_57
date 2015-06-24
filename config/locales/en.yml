@@ -67,8 +67,12 @@ en:
     add_word_ok: "Created Word"
     editted_category: "Editted Category"
     editted_word: "Editted Word"
+    success: "success"
+    fail: "Fail"
   confirm:
     sure: "Are you sure?"
   info:
     created_time: "Created at: "
     updated_time: "Updated at: "
+  link:
+    start: "Start"

@@ -20,4 +20,6 @@ Rails.application.routes.draw do
 
   resources :relationships, only: [:create, :destroy]
   resources :users, except: :destroy
+  resources :categories, only: :index
+  resources :lessons, only: :create
 end
