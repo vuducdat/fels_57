@@ -56,4 +56,8 @@ class User < ActiveRecord::Base
   def following? other_user 
     following.include? other_user 
   end
+
+  def learned_words
+    lessons.sum :correct_number
+  end
 end

@@ -47,6 +47,7 @@ en:
     follower: "Followers"
     all_words: "All Words"
     all_users: "All Users"
+    activities: "Activities"
   menu:
     profile: "Profile"
     setting: "Settings"
@@ -77,3 +78,11 @@ en:
     updated_time: "Updated at: "
   link:
     start: "Start"
+  users:
+    show:
+      learned_target_words: "Learned %{learned_words_number} words"
+  activities:
+    activity:
+      learned_target_words_in_lesson_target: "Learned %{number_words_learn} words in Lesson '%{lesson}'"
+      followed_target: "Followed by user %{target}"
+      unfollowed_target: "Unfollowed by user %{target}"

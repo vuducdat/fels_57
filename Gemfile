@@ -8,7 +8,7 @@ gem "bootstrap-sass", "3.2.0.0"
 gem "bootstrap-will_paginate", "0.0.10"
 gem "will_paginate", "3.0.7"
 gem "bcrypt", "3.1.7"
-gem "faker", "1.4.3"
+gem "ffaker"
 gem "rails_config"
 gem "sqlite3"
 # Use SCSS for stylesheets

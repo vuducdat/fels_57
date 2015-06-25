@@ -1,0 +1,15 @@
+<div class="row activity" id="<%= activity.id %>">
+<%= gravatar_for activity.user, size: Settings.avatar_size %>
+<% if activity.is_learned? %>
+  <%= t ".learned_target_words_in_lesson_target",
+    number_words_learn: activity.target.correct_number,
+    lesson: activity.target.category.name %> -
+  (<%= l activity.created_at.to_date %>)
+<% elsif activity.is_follow? %>
+  <%= t ".followed_target", target: activity.target.name %> -
+  (<%= l activity.created_at.to_date %>)
+<% else %>
+  <%= t ".unfollowed_target", target: activity.target.name %> -
+  (<%= l activity.created_at.to_date %>)
+<% end %>
+</div>

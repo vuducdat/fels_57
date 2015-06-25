@@ -6,12 +6,21 @@
         <%= gravatar_for @user %>
         <%= @user.name %>
       </h1>
+      <br />
+      <%= t ".learned_target_words", learned_words_number: @user.learned_words %>
+      <br />
+      <div class="col-md-8">
+        <%= render "follow_form" if logged_in? %>
+      </div>
     </section>
-    <section class="stats">
+    <section class="clearfix">
       <%= render "shared/stats" %>
     </section>
   </aside>
-  <div class="col-md-8">
-    <%= render "follow_form" if logged_in? %>
+  <div class="col-md-8 content">
+    <h1><%= t "title.activities" %></h1>
+    <div class="container-fluid" id="activities">
+      <%= render @user.activities %>
+    </div>
   </div>
 </div>
