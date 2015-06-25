@@ -15,3 +15,7 @@ avatar_size_user: 50
 naming_for_action_follow:
   -following
   -followers
+activity_status:
+  learned: "Learned"
+  unfollow: "Unfollow"
+  follow: "Follow"
