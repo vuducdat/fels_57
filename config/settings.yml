@@ -8,7 +8,7 @@ password_maximum_length: 6
 remember: 1
 admin: 1
 normal: 0
-per_page: 10
+per_page: 5
 avatar_size_default: 80
 avatar_size: 30
 avatar_size_user: 50
