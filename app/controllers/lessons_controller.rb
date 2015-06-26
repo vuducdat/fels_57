@@ -10,7 +10,11 @@ class LessonsController < ApplicationController
     else
       flash[:danger] = t "flash.fail"
     end
-    redirect_to categories_url
+    redirect_to edit_category_lesson_path(@category, @lesson)
+  end
+
+  def edit
+    @lesson = Lesson.find params[:id]
   end
 
 end

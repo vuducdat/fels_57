@@ -21,4 +21,12 @@ Rails.application.routes.draw do
   resources :categories, only: :index
   resources :lessons, only: :create
   match "/users/:id/:type", to: "relationships#index", via: :get
+
+  resources :categories, only: :index do
+    resources :lessons
+  end
+  resources :lessons do
+    resources :lesson_words
+  end
+
 end

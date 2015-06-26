@@ -3,7 +3,7 @@
     <h1>
       <%= category.name %>
       <p>
-        <%= link_to t("link.start"), lessons_path(category_id: category.id), method: :post %>
+        <%= link_to t("link.start"), category_lessons_path(category_id: category.id), method: :post %>
       </p>
     </h1>
     <p>

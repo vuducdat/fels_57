@@ -1,0 +1,23 @@
+<%= form_for @lesson, url: category_lesson_path(@lesson.category, @lesson), method: "patch", html: {id: "question_form"} do |f| %>
+  <h1><%= @lesson.category.name %></h1>
+  <h2>
+    <span id="answer_count">1</span>/
+    <span id="total"><%= @lesson.lesson_words.count %></span>
+  </h2>
+  <%= f.fields_for :lesson_words do |ff| %>
+    <div class="row answer-form">
+      <div class="col-md-6">
+        <p class="alert alert-info"><%= ff.object.word.content %></p>
+      </div>
+      <div class="col-md-6">
+        <% ff.object.word.answers.each do |answer| %>
+          <label class="alert alert-warning answer-button" role="alert">
+            <%= ff.radio_button :answer_id, answer.id %>
+            <%= answer.content %>
+          </label>
+          </br>
+        <% end %>
+      </div> 
+    </div>
+  <% end %>
+<% end %>
