@@ -1,0 +1,11 @@
+<div class="row">
+  <div class="col-md-2 result-symbol text-danger">
+    <%= lesson_word.is_correct? ? t(".correct") : t(".wrong") %>
+  </div>
+  <div class="col-md-5">
+    <%= lesson_word.word.content %>
+  </div>
+  <div class="col-md-5">
+    <%= lesson_word.answer.content %>
+  </div>
+</div> 

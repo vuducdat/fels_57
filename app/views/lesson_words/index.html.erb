@@ -1,0 +1,15 @@
+<div class="container-fluid">
+  <div class="row" id="lesson_words">
+    <div class="col-md-10 col-md-offset-2">
+      <div class="row">
+        <div class="col-md-4">
+          <h1><%= t ".title", category: @lesson.category.name %></h1>
+          <h2><%= @lesson.correct_number %>/<%= @lesson.lesson_words.count %></h2>
+        </div>
+      </div>
+      <div class="row" id="lesson_words">
+        <%= render @lesson.lesson_words %>
+      </div>
+      </div>
+    </div>
+</div> 
