@@ -48,6 +48,7 @@ en:
     all_words: "All Words"
     all_users: "All Users"
     activities: "Activities"
+    admin_page: "Admin Page"
   menu:
     profile: "Profile"
     setting: "Settings"

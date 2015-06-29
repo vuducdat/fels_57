@@ -1,7 +1,7 @@
 class Admin::CategoriesController < ApplicationController
 
+  before_action :logged_in_admin
   before_action :set_category, only: [:show, :edit, :update]
-
   def index
     @categories = Category.paginate page: params[:page], per_page: Settings.per_page
   end

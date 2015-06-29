@@ -1,5 +1,6 @@
 class Admin::WordsController < ApplicationController
 
+  before_action :logged_in_admin
   before_action :set_category, except: :destroy
   before_action :set_word, only: [:show, :edit, :update]
 
