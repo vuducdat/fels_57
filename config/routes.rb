@@ -10,6 +10,7 @@ Rails.application.routes.draw do
   get "signup"    =>  "users#new"
   
   namespace :admin do
+    root "dashboards#home"
     resources :users, only: [:index, :destroy]
     resources :categories do
       resources :words

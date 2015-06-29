@@ -16,7 +16,7 @@
                 <li><%= link_to t("menu.mana_categories"), admin_categories_path %></li>
               </ul>
             </li>
-          <% else %>
+          <% end %>
             <li class="dropdown">
               <%= link_to t("menu.account"), "#account_modal", class: "dropdown-toggle", 
                 data: {toggle: "dropdown"} %>
@@ -29,7 +29,6 @@
                 </li>
               </ul>
             </li>
-          <% end %>
         <% else %>
           <li><%= link_to t("title.login"), login_path %></li>
         <% end %>
