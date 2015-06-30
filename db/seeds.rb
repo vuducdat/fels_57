@@ -35,6 +35,7 @@ end
   words = category.words.take 20
   words.each do |word|
     answer = word.answers.order("RANDOM()").first
+    lesson_words = lesson.lesson_words.create! answer_id: answer.id, word_id: word.id
     lesson.correct_number += 1 if answer.is_correct?
   end
   lesson.save!
