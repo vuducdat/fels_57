@@ -57,11 +57,12 @@ en:
     mana_users: "Manage Users"
     mana_categories: "Manage Categories"
     user_show_activities: "Show User"
+    word_list: "Word List"
   danger:
     errorMail: "Invalid email/password combination"
-  flash: 
-    logout: "Are you sure logout ?"  
-    errorMail: "Invalid email/password combination"  
+  flash:
+    logout: "Are you sure logout ?"
+    errorMail: "Invalid email/password combination"
     not_loggin: "Please login"
     not_admin: "You aren't admin"
     deleted: "User deleted"
@@ -92,4 +93,11 @@ en:
       title: "%{category} Result"
     lesson_word:
       correct: "O"
-      wrong: "X" 
+      wrong: "X"
+  words:
+    filter_form:
+    category: "Category"
+    learned: "Learned"
+    not_learned: "Not learned"
+    all: "All"
+    filter: "Filter"
