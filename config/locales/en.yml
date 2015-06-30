@@ -8,6 +8,8 @@ en:
     submit: "Submit"
     follow: "Follow"
     unfollow: "Unfollow"
+    words: "Words"
+    lessons: "Lessons"
   title:
     welcome: "welcome to the E-Learning"
     footer: "E-Learning Page by Tokyo"
@@ -104,3 +106,6 @@ en:
   shared:
     audio_button:
     play: "Play"
+  static_pages:
+    home:
+      learned_target_words: "Learned %{learned_words_number} words"

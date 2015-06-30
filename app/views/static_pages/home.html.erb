@@ -1,13 +1,37 @@
 <% if logged_in? %>
-  <div class="row">
+  <div class="container-fluid">
     <aside class="col-md-4">
       <section class="user_info">
         <%= render "shared/user_info" %>
-      </section>
-      <section class="stats">
-        <%= render "shared/stats" %>
+        <br />
+        <%= t ".learned_target_words", learned_words_number: current_user.learned_words %>
+        <br />
+        <br />
+        <div class="clearfix"></div>
+        <div class="stats">
+          <%= render "shared/stats" %>
+        </div>
       </section>
     </aside>
+    <div class="col-md-8 content">
+      <div class="row">
+        <div class="col-md-6">
+          <%= button_to t("button.words"), category_words_path(Category.first), method: "get", class: "btn btn-primary" %>
+        </div>
+        <div class="col-md-6">
+          <%= button_to t("button.lessons"), categories_path, method: "get", class: "btn btn-primary" %>
+        </div>
+      </div>
+        <% if @activities.any? %>
+          <div class="row">
+            <h1><%= t ".activities" %></h1>
+            <div class="container-fluid" id="activities">
+              <%= render @activities %>
+            </div>
+          </div>
+        <% end %>
+    </div>
+    <%= will_paginate @activities %>
   </div>
 <% else %>
   <div class="center jumbotron">
