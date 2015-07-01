@@ -43,4 +43,4 @@ end
 end
 
 user.activities.create! target_id: 1, target_type: Settings.activity_status.follow
-user.activities.create! target_id: 2, target_type: Settings.activity_status.unfollow  
+user.activities.create! target_id: 2, target_type: Settings.activity_status.unfollow
