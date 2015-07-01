@@ -14,13 +14,15 @@
 
   <h2><%= t "title.answer" %></h2>
 
-  <%= f.fields_for :answers do |builder| %>
-    <%= render "answer_fields", f: builder %>
-  <% end %>
+  <div class="answers-fields">
+    <%= f.fields_for :answers do |builder| %>
+      <%= render "answer_fields", f: builder %>
+    <% end %>
 
-  <p>
-    <%= link_to_add_fields t("title.add_answer"), f, :answers %>
-  </p>
+    <p>
+      <%= link_to_add_fields t("title.add_answer"), f, :answers %>
+    </p>
+  </div>
 
   <%= f.submit t("button.submit"), class: "btn btn-primary" %>
 <% end %>
