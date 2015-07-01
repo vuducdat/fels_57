@@ -22,6 +22,12 @@ activity_status:
   unfollow: "Unfollow"
   follow: "Follow"
 type_category:
-   learned: "learned"
-   not_learned: "not_learned"
-   all: "all"
+  learned: "learned"
+  not_learned: "not_learned"
+  all: "all"
+word:
+  minimum_answers: 4
+  audio:
+    allow_type: ["wav", "mp3"]
+    allow_mime: "audio/wav,audio/mp3"
+store_dir: "uploads"

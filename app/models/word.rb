@@ -10,6 +10,8 @@ class Word < ActiveRecord::Base
 
   validates :content, presence: true
 
+  mount_uploader :audio, AudioUploader
+
   query = "id not in (select lw.word_id from lesson_words as lw) AND category_id == ?"
 
   scope :in_category, ->category_id{where category_id: category_id}
@@ -31,5 +33,9 @@ class Word < ActiveRecord::Base
 
   def correct_answer
     answers.find_by is_correct: true
+  end
+
+  def has_audio?
+    !audio.nil?
   end
 end

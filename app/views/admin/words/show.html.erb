@@ -5,6 +5,10 @@
       <h1 class="alert alert-info" >
         <%= @word.content %>
       </h1>
+      <% if @word.has_audio? %>
+        <%= audio_tag @word.audio, class: "audio-play" %>
+        <%= render "shared/audio_button", url: @word.audio %>
+      <% end %>
       <p>
         <%= t "info.created_time" %><%= @word.created_at %>
       </p>

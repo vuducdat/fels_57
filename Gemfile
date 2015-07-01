@@ -11,6 +11,8 @@ gem "bcrypt", "3.1.7"
 gem "ffaker"
 gem "rails_config"
 gem "sqlite3"
+# Use carrierwave for upload audio
+gem "carrierwave", "0.10.0"
 # Use SCSS for stylesheets
 gem "sass-rails", "~> 5.0"
 # Use Uglifier as compressor for JavaScript assets
