@@ -101,3 +101,6 @@ en:
     not_learned: "Not learned"
     all: "All"
     filter: "Filter"
+  shared:
+    audio_button:
+    play: "Play"

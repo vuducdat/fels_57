@@ -50,7 +50,8 @@ class Admin::WordsController < ApplicationController
 
   private
   def word_params
-    params.require(:word).permit :content, answers_attributes: [:id, :content, :is_correct]
+    params.require(:word).permit :content, :audio,
+      answers_attributes: [:id, :content, :is_correct, :_destroy]
   end
 
   def set_category
