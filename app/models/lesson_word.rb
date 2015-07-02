@@ -4,6 +4,7 @@ class LessonWord < ActiveRecord::Base
   belongs_to :answer
 
   scope :unanswered, ->{where answer_id: nil}
+  scope :answered, ->{where.not answer_id: nil}
   scope :correct, ->{joins(:answer).where "answers.is_correct = ?", true}
 
   def is_correct?

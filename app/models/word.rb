@@ -6,7 +6,8 @@ class Word < ActiveRecord::Base
   has_many :lessons, through: :lesson_words
 
   accepts_nested_attributes_for :answers, allow_destroy: true,
-   reject_if: lambda {|attributes| attributes["content"].blank?}
+    reject_if: ->attributes{attributes["content"].blank?},
+    allow_destroy: true
 
   validates :content, presence: true
 
@@ -15,19 +16,19 @@ class Word < ActiveRecord::Base
   query = "id not in (select lw.word_id from lesson_words as lw) AND category_id == ?"
 
   scope :in_category, ->category_id{where category_id: category_id}
-  scope :random, ->(user_id){Word.not_learned_by_user(user_id)
+  scope :random, ->user_id{Word.not_learned_by_user(user_id)
                    .limit(Settings.lesson.words_per_lesson).order("RANDOM()")}
-  scope :not_learned_by_user, ->(user_id){includes(:lessons)
+  scope :not_learned_by_user, ->user_id{includes(:lessons)
     .where("lessons.user_id != ? OR lessons.user_id IS NULL", user_id)
     .references(:lessons)}
-  scope :learned_by_user_id_in_category, ->(user_id, category_id){joins(:lessons)
+  scope :learned_by_user_id_in_category, ->user_id, category_id{joins(:lessons)
     .where "lessons.user_id == ? AND words.category_id == ?", user_id, category_id}
-  scope :learned, ->(user){joins(:lessons)
+  scope :learned, ->user{joins(:lessons)
     .where lessons: {user_id: user.id}}
-  scope :not_learned, ->(user){includes(:lessons)
+  scope :not_learned, ->user{includes(:lessons)
     .where("lessons.user_id != ? OR lessons.user_id IS NULL", user.id)
     .references :lessons}
-  scope :filter_word_list, ->(user, filter, category_id) do
+  scope :filter_word_list, ->user, filter, category_id do
     send(filter, user) unless Settings.type_category.all == filter
   end
 

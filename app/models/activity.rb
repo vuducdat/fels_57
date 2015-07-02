@@ -1,5 +1,6 @@
 class Activity < ActiveRecord::Base
   belongs_to :user, dependent: :destroy
+  belongs_to :target, polymorphic: :true
 
   query = "SELECT user_id FROM users INNER JOIN relationships ON
     users.id = relationships.followed_id"

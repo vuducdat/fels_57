@@ -3,7 +3,9 @@ class User < ActiveRecord::Base
 
   has_many :following, through: :active_relationships, source: :followed
   has_many :lessons, dependent: :destroy
-  has_many :activities, dependent: :destroy
+  has_many :activities, as: :target
+  has_many :activities, ->{newest}, dependent: :destroy
+  has_many :lesson_words, ->{answered}, through: :lessons
   has_many :active_relationships, class_name: "Relationship",
     foreign_key: "follower_id",
     dependent: :destroy
@@ -58,8 +60,7 @@ class User < ActiveRecord::Base
   end
 
   def learned_words
-    lessons.sum :correct_number
-    lessons.collect{|lesson| lesson.lesson_words.count}.sum
+    lesson_words.count
   end
 
   def following_activities

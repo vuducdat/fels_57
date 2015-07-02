@@ -1,6 +1,7 @@
 class UsersController < ApplicationController
   before_action :logged_in_user, only: [:index,:show, :edit, :update]
   before_action :correct_user, only: [:edit, :update]
+  before_action :set_user, only: :show
 
   def index
     @users = User.paginate page: params[:page],
@@ -12,7 +13,7 @@ class UsersController < ApplicationController
   end
 
   def create
-    @user = User.new user_params  
+    @user = User.new user_params
     if @user.save
       log_in @user
       flash[:success] = t "title.welcome"
@@ -23,7 +24,6 @@ class UsersController < ApplicationController
   end
 
   def show
-    @user = User.find params[:id] 
   end
 
   def edit
@@ -55,5 +55,9 @@ class UsersController < ApplicationController
   def correct_user
     @user = User.find params[:id]
     redirect_to root_url unless current_user? @user
+  end
+
+  def set_user
+    @user = User.find params[:id]
   end
 end
