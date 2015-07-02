@@ -3,6 +3,9 @@ class LessonWord < ActiveRecord::Base
   belongs_to :word
   belongs_to :answer
 
+  scope :unanswered, ->{where answer_id: nil}
+  scope :correct, ->{joins(:answer).where "answers.is_correct = ?", true}
+
   def is_correct?
     answer.is_correct?
   end
