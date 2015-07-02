@@ -109,3 +109,6 @@ en:
   static_pages:
     home:
       learned_target_words: "Learned %{learned_words_number} words"
+      activities: "Activities"
+      words: "Words"
+      lessons: "Lessons"

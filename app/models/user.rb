@@ -59,6 +59,7 @@ class User < ActiveRecord::Base
 
   def learned_words
     lessons.sum :correct_number
+    lessons.collect{|lesson| lesson.lesson_words.count}.sum
   end
 
   def following_activities

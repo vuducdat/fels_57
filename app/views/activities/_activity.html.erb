@@ -1,5 +1,7 @@
 <div class="row activity" id="<%= activity.id %>">
-<%= gravatar_for activity.user, size: Settings.avatar_size %>
+<%= link_to activity.user, title: activity.user.name do %>
+  <%= gravatar_for activity.user, size: Settings.avatar_size %>
+<% end %>
 <% if activity.is_learned? %>
   <%= t ".learned_target_words_in_lesson_target",
     number_words_learn: activity.target.correct_number,
